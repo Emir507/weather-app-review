@@ -1,5 +1,5 @@
 <template>
-  <div id="app" :class="typeof weather.main != 'undefined' && weather.main.temp > 16 ? 'warm' : weather.cod === '404' ? 'error' : ''">
+  <div id="app" :class="typeof weather.main != 'undefined' && weather.main.temp > 16 ? 'warm' : typeof weather.main != 'undefined' && weather.main.temp < 16 ? 'cold' : ''">
     <main>
       <div class="search-box">
         <input 
@@ -82,7 +82,7 @@ body {
 #app {
   background-image: url('/bg.jpg');
   background-size: cover;
-  background-position: left;
+  background-position: center;
   transition: .4s;
 }
 
@@ -90,8 +90,8 @@ body {
   background-image: url('/bg.jpg');
   background-position: right;
 }
-#app.error {
-  background-position: center;
+#app.cold {
+  background-position: left;
 }
 main {
   min-height: 100vh;
