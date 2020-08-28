@@ -1,4 +1,4 @@
-# cli-project
+## Vue Weather app
 
 ## Project setup
 ```
