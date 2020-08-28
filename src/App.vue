@@ -80,14 +80,13 @@ body {
   font-family: 'montserrat', sans-serif;
 }
 #app {
-  background-image: url('/bg.jpg');
+  background-image: url('/weather-app/bg.jpg');
   background-size: cover;
   background-position: center;
   transition: .4s;
 }
 
 #app.warm {
-  background-image: url('/bg.jpg');
   background-position: right;
 }
 #app.cold {
